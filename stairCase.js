@@ -17,5 +17,20 @@ const staircase = (n) => {
   return staircase(n-1) + staircase(n-2)
 };
 
-
 console.log(staircase(4))
+
+const iterativeStairs = (n) => {
+  let a = 1;
+  let b = 0;
+  let temp = 0;
+
+  while (n >= 0 ) {
+    temp = a;
+    a = a + b
+    b = temp;
+    n--;
+  };
+  return b;
+};
+
+console.log(iterativeStairs(4))

@@ -14,7 +14,7 @@ What if, instead of being able to climb 1 or 2 steps at a time, you could climb 
 // TREAT LIKE FIBONATI
 
 const numSteps = (n) => {
-    if ( n <= 1 ) return n;
+    if ( n <= 1 ) return 1;
 
     return  numSteps(n-1) + numSteps(n-2)
 }
