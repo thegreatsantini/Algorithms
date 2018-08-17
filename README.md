@@ -1,1 +1,1 @@
-# Daily Whiteboard Question Newsletter
+# Algorithm Practice Problems
