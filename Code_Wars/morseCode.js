@@ -1,4 +1,4 @@
-morseMap = {
+MORSE_CODE = {
     '..-.': 'F',
     '-..-': 'X',
     '.--.': 'P',
@@ -36,20 +36,22 @@ morseMap = {
     '...': 'S',
     '.----': '1'
 }
-
+// NOTE  used .trim to account for extra spaces at begining and end. used spaces var to account for extra spaces between words
 const decodeMorse = (morseCode) => {
-    const toArr = morseCode.split(' ');
-    let decoded = '';
+    let spaces = 0
 
-    const message = toArr.map(val => {
-        // console.log(morseMap[val])
-        if (morseMap[val] === undefined) {
+    return morseCode.trim().split(' ').map(val => {
+        if (MORSE_CODE[val] === undefined && spaces === 0) {
+            console.log('too many')
+            spaces++
             return ' ';
         } else {
-            return morseMap[val]
+            spaces = 0
+            return MORSE_CODE[val]
         }
-    })
-    return message.join('')
+    }).join('')
+
 }
+
 
 console.log(decodeMorse('.... . -.--   .--- ..- -.. .'))
