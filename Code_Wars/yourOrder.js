@@ -21,6 +21,7 @@ const sortString = (indexes, str) => {
 const order = (str) => {
   let toArr = str.split('');
 
+  // could have just used a map with a conditional but i strung to methods together instead. which seems to be more common to do any way 
   const onlyNumbers = toArr.filter(val => parseInt(val)).map(val => parseInt(val, 10))
 
   return sortString(onlyNumbers, str)
