@@ -1,18 +1,10 @@
-// const iterable = ['Turple', 'other' , 'Rokko']
+var uniqEs6 = (arrArg) => {
+    return arrArg.filter((elem, pos, arr) => {
+        return arr.indexOf(elem) === pos;
+    });
+}
 
-// for (const [index, item] of iterable.entries() ) {
-//     console.log(`Index: ${index}, Item: ${item}`);
-// };
+var test = ['james', 'mike', 'james', 'alex'];
+var testBis = ['alex', 'yuri', 'jabari'];
 
-const user = {
-    name: 'Lucas',
-    last: 'Lst name',
-    links : {
-        faceBook: 'FaceBook Link',
-        twitter: 'Twitter Link'
-    }
-};
-
-const { name, last } = user
-
-console.log(user)
+console.log(uniqEs6(test))
