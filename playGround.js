@@ -1,10 +1,14 @@
-var uniqEs6 = (arrArg) => {
-    return arrArg.filter((elem, pos, arr) => {
-        return arr.indexOf(elem) === pos;
-    });
+
+
+const getMiddle = (str)=> {
+    if ( str.length % 2 === 0 ) {
+        return str.substring( (str.length/2) -1, (str.length/2) +1 )
+    }
+    return str[Math.floor(str.length/2)]
 }
 
-var test = ['james', 'mike', 'james', 'alex'];
-var testBis = ['alex', 'yuri', 'jabari'];
 
-console.log(uniqEs6(test))
+console.log(getMiddle("test")) //, "es");
+console.log(getMiddle("testing")) //, "t");
+console.log(getMiddle("middle")) //, "dd");
+console.log(getMiddle("A")) //, "A");
