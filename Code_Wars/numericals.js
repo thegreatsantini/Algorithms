@@ -17,13 +17,12 @@ const numericals = (str) => {
     let finalStr = '';
 
     for (let char of str) {
-        if ( !count[char] ) {
+        if (!count[char]) {
             count[char] = 1
-            finalStr += count[char];
         } else {
-            count[char] ++;
-            finalStr += count[char]
+            count[char]++;
         }
+        finalStr += count[char]
     }
     return finalStr
 }
