@@ -17,9 +17,8 @@ const incrementString = (str) => {
     return  num[0]
 }
 
-console.log(parseInt('00000000000000001', 10))
-console.log(incrementString('foo')) // -> foo1
+// console.log(incrementString('foo')) // -> foo1
 console.log(incrementString('foobar23')) // -> foobar24
 console.log(incrementString('foo0042')) // -> foo0043
-console.log(incrementString('foo9')) // -> foo10
+// console.log(incrementString('foo9')) // -> foo10
 console.log(incrementString('foo099' )) //-> foo100
