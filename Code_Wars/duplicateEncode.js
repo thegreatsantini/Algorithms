@@ -6,26 +6,26 @@ Assertion messages may be unclear about what they display in some languages. If 
 
 const countLetters = (str) => {
     return str.toLowerCase().split('').reduce((acc, next) => {
-        acc[next] ? acc[next] ++ : acc[next] = 1;
+        acc[next] ? acc[next]++ : acc[next] = 1;
         return acc
     }, {})
-} 
+}
 
 const duplicateEncode = (str) => {
+
     const letterCount = countLetters(str);
     let finalStr = '';
-    const strArr = str.split('')
-    for ( let key of strArr ) {
-        if ( letterCount[key] === 1 ) {
+    const strArr = str.toLowerCase().split('')
+    for (let key of strArr) {
+        if (letterCount[key] === 1) {
             finalStr += '('
-            console.log(letterCount[key], key, finalStr)
         } else {
             finalStr += ')'
-            console.log(letterCount[key], key, finalStr)
         }
     }
-return finalStr
+    return finalStr
 }
+
 
 // console.log(duplicateEncode("din")) //=> "((("
 // console.log(duplicateEncode("recede")) //=> "()()()"
