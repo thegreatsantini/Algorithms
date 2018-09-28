@@ -1,10 +1,12 @@
 ﻿using System;
+
 namespace algos
 {
     public class anotherAlgo
     {
-        public anotherAlgo()
+        static void algoTwo(string[] args)
         {
+            Console.WriteLine(" World!");
         }
     }
 }

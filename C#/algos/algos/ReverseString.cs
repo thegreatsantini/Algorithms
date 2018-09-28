@@ -1,10 +1,12 @@
 ﻿using System;
-namespace algos
+
+namespace ReverseString
 {
-    public class ReverseString
+    class Solution
     {
-        public ReverseString()
+        static void NotMain()
         {
+            Console.WriteLine("This is the Reverese string function");
         }
     }
 }
