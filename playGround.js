@@ -13,18 +13,18 @@
 // console.log(getMiddle("middle")) //, "dd");
 // console.log(getMiddle("A")) //, "A");
 
-var isPalindrome = function (s) {
-    let str = s.replace(/[^\w]|_/g, "").toLowerCase()
-    let left = 0;
-    let right = str.length - 1;
-    while (left != Math.floor(s.length/2) ) {
-        if (str[left] !== str[right]) {
-            return false;
-        }
-        left++;
-        right--;
-    }
-    return true;
-};
+const myArr = [1, 1, 4, 5, 5, 5, 6, 8];
 
-console.log(isPalindrome("race a car"))
+const onlyUniques = myArr.filter((val, i) => {
+    if (myArr.indexOf(val) === i && myArr.lastIndexOf(val) === i) {
+        return val
+    }
+})
+
+const onlyDulicates = myArr.filter((val, i) => {
+    if (myArr.indexOf(val) === i) {
+        return val
+    }
+})
+
+console.log(onlyDulicates)
