@@ -1,3 +1,7 @@
+/*
+How do you reverse a linked list?
+*/
+
 function LinkedList() {
     this.head = null;
 };
@@ -27,13 +31,23 @@ myList.push('you');
 myList.push('did');
 myList.push('it');
 
-const traverseInterative = (head) => {
+const reverseUsingArray = (head) => {
+    const myArr = [];
     let node = head;
-    
+
     while ( node ) {
-        console.log(node.value)
-        node = node.next
+        myArr.push(node.value);
+        node = node.next;
     }
+    return myArr.reverse();
 }
 
-console.log(traverseInterative(myList.head))
+const reverListRecursive = (head, arr) => {
+    if ( !head ) return arr.reverse();
+
+    arr.push(head.value);
+    return reverListRecursive(head.next, arr);
+}
+
+console.log(reverListRecursive(myList.head, []))
+console.log(reverseUsingArray(myList.head))

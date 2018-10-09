@@ -27,13 +27,23 @@ myList.push('you');
 myList.push('did');
 myList.push('it');
 
-const traverseInterative = (head) => {
-    let node = head;
-    
-    while ( node ) {
-        console.log(node.value)
-        node = node.next
+const findMiddleItertive = (head) => {
+
+    let slow = head;
+    let fast = head;
+
+    while (fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next.next;
     }
+    return slow.value
 }
 
-console.log(traverseInterative(myList.head))
+const findMiddleRecursive = (slow, fast) => {
+    if (slow === null || fast.next === null) {
+        return slow.value
+    }
+    return findMiddleRecursive(slow.next, fast.next.next)
+}
+
+console.log(findMiddleRecursive(myList.head, myList.head))
