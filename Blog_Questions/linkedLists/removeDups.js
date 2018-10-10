@@ -52,8 +52,6 @@ const removeDupsIter = (head) => {
     while (node) {
         if (!itemCnt[node.value]) {
             itemCnt[node.value] = 1;
-        } else {
-            itemCnt[node.value]++;
         }
         node = node.next;
     }
@@ -64,25 +62,14 @@ const removeDupsIter = (head) => {
 }
 
 const removeDupsRecur = (node, newList, count) => {
-    const onlyUniques = newList;
-    const itemCnt = count;
-    if (!node) {
-        for (let item in itemCnt) {
-            onlyUniques.push(item)
-        }
-        return onlyUniques.getSize()
+    if (!node) return newList.getSize();
+
+    if (!count[node.value]) {
+        count[node.value] = 1;
+        newList.push(node.value)
     }
-    else {
-        if ( !itemCnt[node.value] ) {
-            itemCnt[node.value] = 1;
-        }
-        else {
-            itemCnt[node.value]++;
-        }
-        
-        return removeDupsRecur(node.next, onlyUniques, itemCnt)
-    }
+    return removeDupsRecur(node.next, newList, count)
 }
 
 console.log(removeDupsRecur(myList.head, new LinkedList(), {}))
-// console.log(removeDupsIter(myList.head))
+console.log(removeDupsIter(myList.head))

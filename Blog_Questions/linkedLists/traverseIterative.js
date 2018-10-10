@@ -36,4 +36,4 @@ const traverseInterative = (head) => {
     }
 }
 
-console.log(traverseInterative(myList.head))
+traverseInterative(myList.head)

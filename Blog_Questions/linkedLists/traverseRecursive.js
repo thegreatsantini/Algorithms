@@ -28,12 +28,10 @@ myList.push('did');
 myList.push('it');
 
 const traverseRecursive = (node) => {
-    if (!node)
-    return;
-    // else {
-        console.log(node.value)
-        return traverseRecursive(node.next)
-    // }
+    if (!node) return;
+
+    console.log(node.value)
+    return traverseRecursive(node.next)
 }
 
 traverseRecursive(myList.head);

@@ -12,18 +12,16 @@ const getLengthIter = (list) => {
     let node = list;
     let size = 0;
 
-    while ( node ) {
+    while (node) {
         size++;
         node = node.next;
     }
     return size;
 }
 
-const getLengthRecur = (node, size=0) => {
-    if ( !node ) {
-        
-        return size;
-    }
+const getLengthRecur = (node, size = 0) => {
+    if (!node) return size;
+
     size++
     return getLengthRecur(node.next, size)
 }
