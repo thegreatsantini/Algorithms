@@ -1,28 +1,30 @@
 //FIFO
-function MyQueue ()  {
-    this.data = [];
+class Queue {
+    constructor() {
+        this.data = [];
+    }
+    add(item) {
+        this.data.push(item);
+    }
+    remove() {
+        return this.data.shift();
+    }
+    display() {
+        console.log(this.data);
+    }
+    print() {
+        this.data.forEach(val => console.log(val));
+    }
 }
 
-MyQueue.prototype.add = function (item) {
-    this.data.push(item);
-}
 
-MyQueue.prototype.remove = function () {
-    return this.data.shift();
-}
 
-MyQueue.prototype.display = function () {
-    console.log(this.data);
-}
 
-MyQueue.prototype.print = function () {
-    this.data.forEach( val => console.log(val) )
-}
-const newQueue = new MyQueue();
+const myQueue = new Queue();
 
-newQueue.add(1)
-newQueue.add(2)
-newQueue.add(3)
-newQueue.add(4)
-newQueue.add(5)
-newQueue.print()
+myQueue.add(1)
+myQueue.add(2)
+myQueue.add(3)
+myQueue.add(4)
+myQueue.add(5)
+myQueue.print()
