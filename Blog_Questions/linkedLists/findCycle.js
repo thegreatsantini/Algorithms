@@ -33,9 +33,9 @@ node2.next=node3;
 
 const hasCycle = (head) => {
     let slow = head;
-    let fast = head.next;
+    let fast = head;
     
-    while ( slow != null) {
+    while ( fast.next.next ) {
         if ( fast.value === slow.value ) {
             return true
         }
