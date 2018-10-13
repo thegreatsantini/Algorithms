@@ -1,5 +1,5 @@
 //LIFO
-export default class MyStack {
+export class MyStack {
     constructor() {
         this.data = [];
     }
