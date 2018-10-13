@@ -39,6 +39,7 @@ MyStack.push(8)
 MyStack.push(5)
 MyStack.push(1)
 MyStack.push(7)
+
 MyStack.push(17)
 MyStack.push(7)
 MyStack.push(9)
