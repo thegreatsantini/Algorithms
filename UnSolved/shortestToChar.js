@@ -14,12 +14,10 @@ const shortestToChar = (s, c) => {
 
   for ( let i = 0; i < s.length; i++ ) {
     for ( let j = 0; j< arrS.length; j++ ) {
-      if ( c )
     }
   };
 
 
-  };
   return finalArr;
 };
 

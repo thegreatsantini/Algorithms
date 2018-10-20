@@ -14,17 +14,20 @@
 // console.log(getMiddle("A")) //, "A");
 
 const myArr = [1, 1, 4, 5, 5, 5, 6, 8];
+const myArr2 = [1, 1, 4, 5, 5, 5, 6, 8];
 
-const onlyUniques = myArr.filter((val, i) => {
-    if (myArr.indexOf(val) === i && myArr.lastIndexOf(val) === i) {
-        return val
-    }
-})
+const test = [...(new Set(myArr))]
+console.log(test)
+// const onlyUniques = myArr.filter((val, i) => {
+//     if (myArr.indexOf(val) === i && myArr.lastIndexOf(val) === i) {
+//         return val
+//     }
+// })
 
-const onlyDulicates = myArr.filter((val, i) => {
-    if (myArr.indexOf(val) === i) {
-        return val
-    }
-})
+// const onlyDulicates = myArr.filter((val, i) => {
+//     if (myArr.indexOf(val) === i) {
+//         return val
+//     }
+// })
 
-console.log(onlyDulicates)
+// console.log(onlyDulicates)
