@@ -13,11 +13,11 @@
 // console.log(getMiddle("middle")) //, "dd");
 // console.log(getMiddle("A")) //, "A");
 
-const myArr = [1, 1, 4, 5, 5, 5, 6, 8];
-const myArr2 = [1, 1, 4, 5, 5, 5, 6, 8];
+// const myArr = [1, 1, 4, 5, 5, 5, 6, 8];
+// const myArr2 = [1, 1, 4, 5, 5, 5, 6, 8];
 
-const test = [...(new Set(myArr))]
-console.log(test)
+// const test = [...(new Set(myArr))]
+// console.log(test)
 // const onlyUniques = myArr.filter((val, i) => {
 //     if (myArr.indexOf(val) === i && myArr.lastIndexOf(val) === i) {
 //         return val
@@ -29,5 +29,9 @@ console.log(test)
 //         return val
 //     }
 // })
+
+let string = "abc";
+string[0] = 'z';
+console.log(string)
 
 // console.log(onlyDulicates)
