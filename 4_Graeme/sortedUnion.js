@@ -6,13 +6,13 @@ In other words, all values present from all arrays should be included in their o
 The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
 */
 
-const uniteUnique = function() {
-    let finalArr= [];
-
-    for ( let args in arguments ) {
+const uniteUnique = function () {
+    let finalArr = [];
+    console.log(arguments)
+    for (let args in arguments) {
         finalArr = finalArr.concat(arguments[args])
     }
- return [...new Set(finalArr)]
+    return [...new Set(finalArr)]
 }
 
 // console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])) // [1, 3, 2, 5, 4].
