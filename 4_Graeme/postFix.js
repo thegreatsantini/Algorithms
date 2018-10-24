@@ -60,8 +60,8 @@ const postFix = (str) => {
     return order
 }
 
-const numbers = '15 7 1 1 + − / 3 * 2 1 1 + + −'
-// const numbers = '5 6 7 * + 1 -'
+// const numbers = '15 7 1 1 + − / 3 * 2 1 1 + + −'
+const numbers = '5 6 7 * + 1 -'
 // 15 7 1 1 + − ÷ 3 × 2 1 1 + + −
 
 console.log('pp', postFix(numbers));
