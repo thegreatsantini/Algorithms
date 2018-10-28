@@ -1,5 +1,5 @@
 const q1 = "" + 1 + 0; // 10
-// console.log(q1)
+console.log(q1)
 
 const q2 = "" - 1 + 0; // -1
 // console.log(q2)
