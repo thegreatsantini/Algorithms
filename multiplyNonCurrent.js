@@ -27,7 +27,6 @@ const multiplyNonCurrent = (arr) => {
     return arr.map((val, i) => {
         const left = arr.slice(0, i);
         const right = arr.slice(i+1, arr.length);
-        console.log(left, right)
         return left.concat(right).reduce((accum, next) => accum * next)
     })
 }
