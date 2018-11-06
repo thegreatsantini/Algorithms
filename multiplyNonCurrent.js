@@ -6,22 +6,6 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 Follow-up: what if you can't use division?
 */
 
-// function multiplyNonCurrent(arr) {
-//     let newArr = [];
-//     count = 0
-//     while (count < arr.length) {
-//         let accumulator = 1
-//         for (let i = 0; i < arr.length; i++) {
-//             if (i !== count) {
-//                 accumulator *= arr[i]
-//             }
-//         }
-//         newArr.push(accumulator)
-//         count++
-//     }
-//     return newArr
-// }
-
 
 const multiplyNonCurrent = (arr) => {
     return arr.map((val, i) => {
