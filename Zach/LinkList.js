@@ -65,14 +65,4 @@ class LinkedList {
     }
 }
 
-const myList = new LinkedList();
-
-myList.add(1);
-myList.add(2);
-myList.add(3);
-myList.add(4);
-myList.add(5);
-
-myList.remove(5);
-myList.iterate();
-// console.log(myList)
+module.exports = LinkedList;
