@@ -32,11 +32,25 @@ e.g.
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ?!@#&()|<>.:=-+*/0123456789'
 
-const lines = ["HELLO "]
-const rotors = [[15,49,50,48,43,13]]
-const result = ["World!"]
-console.log(ALPHABET.length)
-console.log(ALPHABET[ALPHABET.indexOf('C') * 1])
-const flapDisplay = (arr) => {
+const lines = ["CAT"]         // ["HELLO "]
+const rotors = [1, 13, 27]    // [[15,49,50,48,43,13]]
+const result = ["DOG"]        // ["WORLD!"]
+// console.log(ALPHABET.length)
+// console.log(ALPHABET[ALPHABET.indexOf('C')])
+// console.log(ALPHABET[ALPHABET.indexOf('C') + 1])
+// console.log(ALPHABET[ALPHABET.indexOf('A') + 13 + 1])
+// console.log(ALPHABET[ALPHABET.indexOf('T') + 27 + 14])
 
+const flapDisplay = (str, rotors) => {
+    let currentFlap = 0;
+    let locations = rotors.map( (val, i) => rotors.slice(0, i + 1).reduce((acc, next) => acc+ next), 0 );
+    console.log(locations)
+    let finalStr = '';
+    let char = 0;
+    locations.forEach(index => {
+        finalStr += ALPHABET[ALPHABET.indexOf(str[char]) + index ]
+    });
+    console.log(finalStr)   
 }
+
+flapDisplay(lines, rotors)
