@@ -36,7 +36,8 @@ const lines = ["HELLO "]
 const rotors = [[15,49,50,48,43,13]]
 const result = ["World!"]
 console.log(ALPHABET.length)
-console.log(ALPHABET[ALPHABET.indexOf('C') * 1])
+// console.log(ALPHABET[ALPHABET.indexOf('C')])
+console.log( ALPHABET[1] )
 const flapDisplay = (arr) => {
 
 }
