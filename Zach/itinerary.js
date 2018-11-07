@@ -28,13 +28,12 @@ var myList = require('./LinkList');
 const itinerary = (arr) => {
     const flights = arr.reduce((acc, next) => acc.concat(Object.values(next)), []).filter((item, i, filtered) => {
         const nextLocation = filtered.indexOf(item, i + 1);
-        console.log(item, i, nextLocation)
         if ( nextLocation != i +1) {
             return item
         }
     })
 
-    return flights
+    return flights.join('-');
 }
 
 // Now we have to create a helper function itinerary for JS that extract the unique airport list:
