@@ -23,6 +23,17 @@ class Queue {
         this.head = this.head.next;
         return removed;
     }
+    iterate() {
+        let queue = [];
+        let current = this.head;
+        while ( current.next ) {
+            queue.push(current.value);
+            current = current.next;
+        }
+        queue.push(current.value);
+        console.log(queue);
+        return queue;
+    }
 }
 
 
