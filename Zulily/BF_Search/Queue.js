@@ -3,22 +3,25 @@ class Queue {
         this.head = null;
     }
     enqueue(item) {
-        const node = {
-            value: item,
-            next: null 
-        }
-        if ( !this.head ) {
-            this.head = node;
-            return;
-        } else {
-            let current = this.head;
-            while ( current.next ) {
-                current = current.next;
+        item.forEach(element => {
+            const node = {
+                value: element,
+                next: null 
             }
-            current.next = node;
-        }
+            if ( !this.head ) {
+                this.head = node;
+                return;
+            } else {
+                let current = this.head;
+                while ( current.next ) {
+                    current = current.next;
+                }
+                current.next = node;
+            }
+        });
     }
     dequeue() {
+        // if ( !this.head ) return false;
         const removed = this.head.value
         this.head = this.head.next;
         return removed;
