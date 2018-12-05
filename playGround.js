@@ -8,19 +8,55 @@
 //      console.log("My New Salary " + salary);
 // })();
 
-class Person {
-    constructor() {
-        this.name = '';
-        this.age = 0;
-    }
+const genresToDisplay = ['comedy', 'mystery'];
 
-    sayName() {
-        console.log("hello i am " + this.name)
+const users = [
+    {
+        _id: 'us-757',
+        userName: 'thegreatsantini',
+        genres: ['romance', 'fiction', 'adventure']
+    },
+    {
+        _id: 'us-747',
+        userName: 'grammer_erickson',
+        genres: ['comedy', 'non-fiction', 'love']
+    },
+    {
+        _id: 'us-737',
+        userName: 'sierra.cortes',
+        genres: ['mystery']
+    },
+    {
+        _id: 'us-777',
+        userName: 'mikealscott',
+        genres: ['comedy']
+    },
+    {
+        _id: 'us-787',
+        userName: 'dani_bear',
+        genres: ['fantasy', 'romance', 'fiction', 'adventure']
+    },
+    {
+        _id: 'us-221',
+        userName: 'jimdubs',
+        genres: ['non-fiction', 'biography']
     }
+];
+
+
+const filterUsers = (selectedGenres, users) => {
+
+    const filteredGenres = selectedGenres.reduce((acc, next) => {
+        acc[next] = 1;
+        return acc
+    }, {})
+   
+
+    return users.filter(person => {
+        return person.genres.some(val => filteredGenres[val])
+    })
 }
 
+const test = filterUsers(genresToDisplay, users);
+console.log(test)
 
-const Lucas = new Person()
-Lucas.name = "Lucas"
-Lucas.sayName();
-console.log(Person)
