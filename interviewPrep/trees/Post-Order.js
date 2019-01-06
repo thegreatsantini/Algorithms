@@ -31,13 +31,13 @@ class BinarySearchTree {
     }
   }
   postOrderPrint(currentNode) {
-      if (currentNode !== null) {
-          // recurse to the left subtree
-          this.postOrderPrint(currentNode.leftChild)
-          // recurse to the right 
-          this.postOrderPrint(currentNode.rightChild)
-          console.log(currentNode.val)
-      }
+    if (currentNode !== null) {
+      // recurse to the left subtree
+      this.postOrderPrint(currentNode.leftChild)
+      // recurse to the right 
+      this.postOrderPrint(currentNode.rightChild)
+      console.log(currentNode.val)
+    }
   }
 }
 

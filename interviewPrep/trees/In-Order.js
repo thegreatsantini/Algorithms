@@ -34,15 +34,17 @@ class BinarySearchTree {
             parent.rightChild = new Node(newVal);
         }
     }
-    inOrderPrint(currentNode) {
+    inOrderPrint(currentNode, arr=[]) {
         if (currentNode !== null) {
             // recursive call to the left subtree
-            this.inOrderPrint(currentNode.leftChild)
+            this.inOrderPrint(currentNode.leftChild, arr)
             // print value of the current node
+            arr.push(currentNode.val)
             console.log(currentNode.val)
             // make recursive call to the right subtree
-            this.inOrderPrint(currentNode.rightChild)
+            this.inOrderPrint(currentNode.rightChild, arr)
         }
+        return arr
     }
 }
 
@@ -57,4 +59,5 @@ BST.insert(12)
 BST.insert(10)
 BST.insert(14)
 
-BST.inOrderPrint(BST.root)
+const toArray = BST.inOrderPrint(BST.root)
+console.log(toArray)
