@@ -8,6 +8,9 @@ class Queue {
   dequeue() {
       return this.queue.shift();
   }
+  print() {
+    console.log(this.queue)
+  }
 }
 
 module.exports = Queue;
