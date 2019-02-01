@@ -1,0 +1,13 @@
+#btns {
+    display: grid;
+    grid-template-rows: 75% 75% 75% 75%;
+    grid-gap: 10px;
+    justify-content: center;
+  }
+
+  .btn {
+    width: 30%;
+    height: 48px;
+    font-size: 24px;
+    align-items: center;
+  }
