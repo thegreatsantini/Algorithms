@@ -1,0 +1,10 @@
+.container {
+  border: white solid 2px;
+  height: 10px;
+}
+
+#status {
+  background-color: blue;
+  height: 10px;
+  width: 0;
+}
