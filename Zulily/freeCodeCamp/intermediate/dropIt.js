@@ -1,17 +1,26 @@
-const dropElements = (arr, cd) => {
-  return arr.filter(item => cd(item));
+const dropElements = (arr, cb) => {
+  let index = 0;
+  let final = [];
+  for (let item of arr) {
+    if (cb(item)) {
+      return final;
+    } else {
+      index++;
+      final = arr.slice(index);
+    }
+  }
 };
 
-console.log(
-  dropElements([1, 2, 3, 4], function(n) {
-    return n >= 3;
-  })
-); // should return [3, 4].
-console.log(
-  dropElements([0, 1, 0, 1], function(n) {
-    return n === 1;
-  })
-); // should return [1, 0, 1].
+// console.log(
+//   dropElements([1, 2, 3, 4], function(n) {
+//     return n >= 3;
+//   })
+// ); // should return [3, 4].
+// console.log(
+//   dropElements([0, 1, 0, 1], function(n) {
+//     return n === 1;
+//   })
+// ); // should return [1, 0, 1].
 console.log(
   dropElements([1, 2, 3], function(n) {
     return n > 0;
@@ -22,13 +31,13 @@ console.log(
     return n > 5;
   })
 ); // should return [].
-console.log(
-  dropElements([1, 2, 3, 7, 4], function(n) {
-    return n > 3;
-  })
-); // should return [7, 4].
-console.log(
-  dropElements([1, 2, 3, 9, 2], function(n) {
-    return n > 2;
-  })
-); // should return [3, 9, 2].
+// console.log(
+//   dropElements([1, 2, 3, 7, 4], function(n) {
+//     return n > 3;
+//   })
+// ); // should return [7, 4].
+// console.log(
+//   dropElements([1, 2, 3, 9, 2], function(n) {
+//     return n > 2;
+//   })
+// ); // should return [3, 9, 2].
