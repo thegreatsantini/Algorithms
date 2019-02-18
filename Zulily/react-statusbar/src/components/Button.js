@@ -4,7 +4,7 @@ function Button(props) {
   const { toggleRun } = props;
   return (
     <button onClick={toggleRun} className="App-link">
-      Learn React
+      run bar
     </button>
   );
 }
