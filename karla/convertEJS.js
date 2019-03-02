@@ -6,10 +6,16 @@ const data = {
 };
 const convertEjs = str => {
   return str
-    .replace(/({{|}})/g, " ")
-    .split(" ")
-    .map(word => data[word] || word)
-    .join(" ");
+    .split(/({{|}})/)
+    .map(word => {
+      if (word !== "{{" && word !== "}}") {
+        console.log("word", word);
+        return data[word] || word;
+      } else {
+        return "";
+      }
+    })
+    .join("");
 };
 
 console.log(convertEjs(esj));
