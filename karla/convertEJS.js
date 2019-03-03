@@ -9,7 +9,6 @@ const convertEjs = str => {
     .split(/({{|}})/)
     .map(word => {
       if (word !== "{{" && word !== "}}") {
-        console.log("word", word);
         return data[word] || word;
       } else {
         return "";

@@ -23,25 +23,26 @@ Now in our database we save the travel as a list of objects with in/out properti
 ]
 */
 
-var myList = require('./LinkList');
+var myList = require("./LinkList");
 
-const itinerary = (arr) => {
-    const flights = arr.reduce((acc, next) => acc.concat(Object.values(next)), []).filter((item, i, filtered) => {
-        const nextLocation = filtered.indexOf(item, i + 1);
-        if ( nextLocation != i +1) {
-            return item
-        }
-    })
+const itinerary = arr => {
+  const flights = arr
+    .reduce((acc, next) => acc.concat(Object.values(next)), [])
+    .filter((item, i, filtered) => {
+      const nextLocation = filtered.indexOf(item, i + 1);
+      if (nextLocation != i + 1) {
+        return item;
+      }
+    });
 
-    return flights.join('-');
-}
+  return flights.join("-");
+};
 
 // Now we have to create a helper function itinerary for JS that extract the unique airport list:
 const travel = itinerary([
-    { in: "TRN", out: "FCO" },
-    { in: "FCO", out: "JFK" },
-    { in: "JFK", out: "FCO" }
+  { in: "TRN", out: "FCO" },
+  { in: "FCO", out: "JFK" },
+  { in: "JFK", out: "FCO" }
 ]); // TRN-FCO-JFK-FCO
 
-
-console.log(travel)
+console.log(travel);
