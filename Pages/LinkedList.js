@@ -10,15 +10,15 @@ class Node {
       this.head = null;
     }
     add(item) {
-      const node = new Node(item);
+      const newNode = new Node(item);
       if (!this.head) {
-        this.head = node;
+        this.head = newNode;
       } else {
         let current = this.head;
         while (current.next) {
           current = current.next;
         }
-        current.next = node;
+        current.next = newNode;
       }
     }
     hasCycle() {

@@ -1,11 +1,16 @@
 class Stack {
   constructor() {
     this.stack = [];
+    this.size = 0;
   }
   push(newVal) {
-    this.stack.push(newVal);
+    this.stack.unshift(newVal);
+    this.size = this.size + 1;
   }
   pop() {
+    if(this.size > 0) {
+      this.size = this.size - 1;
+    }
     return this.stack.pop();
   }
   peek() {
@@ -25,3 +30,8 @@ class Stack {
 }
 
 const stack = new Stack();
+stack.push(1)
+stack.push(2)
+stack.push(3)
+stack.push(4)
+console.log(stack)
