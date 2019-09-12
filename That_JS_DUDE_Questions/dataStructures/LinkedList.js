@@ -60,7 +60,6 @@ class LinkedList {
     }
     findNthFromEnd(target) {
         
-
     }
     print() {
         let node = this.head;

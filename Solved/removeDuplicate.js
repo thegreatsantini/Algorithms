@@ -5,9 +5,6 @@ Do not allocate extra space for another array, you must do this by modifying the
 */
 
 const removeDuplicates = function(nums) {
-    for ( let i = 0; i < nums.length; i++ ) {
-      if ( i === nums.length && nums[i] ===  )
-    }
     let toSet = new Set(nums)
     return Array.from(toSet).length;
 };
