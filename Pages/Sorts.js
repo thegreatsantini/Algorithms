@@ -19,9 +19,9 @@ const mergeSort = arr => {
 
   const midpoint = Math.floor(arr.length / 2);
   const left = arr.slice(0, midpoint);
-  const rightSide = arr.slice(midpoint, arr.length);
+  const right = arr.slice(midpoint, arr.length);
 
-  return merge(mergeSort(left), mergeSort(rightSide));
+  return merge(mergeSort(left), mergeSort(right));
 };
 
 // Quick Sort
