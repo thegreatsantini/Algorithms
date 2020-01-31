@@ -19,3 +19,4 @@ class MyHashTable {
 }
 
 const test = new MyHashTable();
+c
